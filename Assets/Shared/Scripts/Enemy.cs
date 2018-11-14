@@ -8,26 +8,23 @@ public class Enemy : MonoBehaviour {
     private Transform target;
     private int waypointIndex = 0;
 
-    float _distanceToGoal;
     public float DistanceToGoal {
         get
         {
+            Vector3 dir = target.position - transform.position;
+            int waypointsLeft = Waypoints.points.Length - waypointIndex;
+            float _distanceToGoal = 10000f * waypointsLeft + dir.magnitude;
+
             return _distanceToGoal;
         }
     }
 
 	void Start () {
         target = Waypoints.points[0];
-
-        Vector3 dir = target.position - transform.position;
-        _distanceToGoal = dir.magnitude;
 	}
 	
 	void Update () {
         Vector3 dir = target.position - transform.position;
-        int waypointsLeft = Waypoints.points.Length - waypointIndex;
-        _distanceToGoal = 10000f * waypointsLeft + dir.magnitude;
-
         Vector3 move = dir.normalized * speed * Time.deltaTime;
         transform.Translate(move, Space.World);
 
