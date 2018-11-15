@@ -36,7 +36,10 @@ public class Turret : MonoBehaviour {
         if (enemyClosestToGoal != null)
         {
             target = enemyClosestToGoal.transform;
-            Debug.Log(shortestEnemyDistanceToGoal);
+        }
+        else
+        {
+            target = null;
         }
     }
 
