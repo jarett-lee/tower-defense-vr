@@ -24,7 +24,7 @@ public class Turret : MonoBehaviour {
         {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
             bool inRange = distanceToEnemy < range;
-            float enemyDistanceToGoal = enemy.GetComponent<Enemy>().DistanceToGoal;
+            float enemyDistanceToGoal = enemy.GetComponent<EnemyMovement>().DistanceToGoal;
             bool closer = shortestEnemyDistanceToGoal > enemyDistanceToGoal;
             if (inRange && closer)
             {
