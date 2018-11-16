@@ -38,6 +38,13 @@ public class EnemyMovement : MonoBehaviour {
     {
         if (waypointIndex >= Waypoints.points.Length - 1)
         {
+            if (Debug.isDebugBuild)
+            {
+                waypointIndex = 0;
+                target = Waypoints.points[waypointIndex];
+                return;
+            }
+            
             Destroy(gameObject);
             return;
         }
