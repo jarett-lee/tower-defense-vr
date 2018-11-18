@@ -125,6 +125,6 @@ public class Turret : MonoBehaviour
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
 
-        Vector3 dir = firePoint.position - target.position;
+        targetEnemy.TakeDamage(damage);
     }
 }
