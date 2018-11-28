@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class WaveSpawner : MonoBehaviour {
 
@@ -14,7 +15,9 @@ public class WaveSpawner : MonoBehaviour {
     public float timeBetweenWaves = 5f;
     private float countdown = 2f;
 
-    public Text waveCountdownText;
+    public TextMeshPro waveCountdownText;
+    public TextMeshPro enemiesLeftText;
+    public TextMeshPro waveIndexText;
 
     public GameManager gameManager;
 
@@ -22,6 +25,8 @@ public class WaveSpawner : MonoBehaviour {
 
     void Update()
     {
+        enemiesLeftText.text = string.Format("Enemies: {0:0}", EnemiesAlive);
+
         if (EnemiesAlive > 0)
         {
             return;
@@ -31,6 +36,7 @@ public class WaveSpawner : MonoBehaviour {
         {
             gameManager.WinLevel();
             this.enabled = false;
+            return;
         }
 
         if (countdown <= 0f)
@@ -44,7 +50,8 @@ public class WaveSpawner : MonoBehaviour {
 
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
-        waveCountdownText.text = string.Format("{0:00.00}", countdown);
+        waveCountdownText.text = string.Format("Spawn: {0:00.00}", countdown);
+        waveIndexText.text = string.Format("Wave: {0:0}/{1:0}", waveIndex + 1, waves.Length);
     }
 
     IEnumerator SpawnWave()
