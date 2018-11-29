@@ -45,7 +45,7 @@ public class EnemyMovement : MonoBehaviour {
     {
         if (waypointIndex >= Waypoints.points.Length - 1)
         {
-            PlayerState.Lives--;
+            PlayerStats.Lives--;
             WaveSpawner.EnemiesAlive--;
             Destroy(gameObject);
             return;
