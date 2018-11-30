@@ -10,14 +10,17 @@ using Valve.VR.InteractionSystem;
 
 //-------------------------------------------------------------------------
 [RequireComponent(typeof(Interactable))]
+[RequireComponent(typeof(TempNode))]
 public class InteractableNode : MonoBehaviour
 {
     private Interactable interactable;
+    private TempNode node;
 
     //-------------------------------------------------
     void Awake()
     {
         interactable = GetComponent<Interactable>();
+        node = GetComponent<TempNode>();
     }
 
 
@@ -48,11 +51,8 @@ public class InteractableNode : MonoBehaviour
 
         if (interactable.attachedToHand == null && startingGrabType != GrabTypes.None)
         {
-            // Call this to continue receiving HandHoverUpdate messages,
-            // and prevent the hand from hovering over anything else
-            hand.HoverLock(interactable);
-
             // Build turret
+            node.BuildTurret();
         }
     }
 }
