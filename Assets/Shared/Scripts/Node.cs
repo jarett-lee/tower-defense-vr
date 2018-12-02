@@ -3,8 +3,6 @@ using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour {
 
-	public Color hoverColor;
-	public Color notEnoughMoneyColor;
     public Vector3 positionOffset;
 
 	[HideInInspector]
@@ -15,15 +13,11 @@ public class Node : MonoBehaviour {
 	public bool isUpgraded = false;
 
 	private Renderer rend;
-	private Color startColor;
 
 	BuildManager buildManager;
 
 	void Start ()
 	{
-		rend = GetComponent<Renderer>();
-		startColor = rend.material.color;
-
 		buildManager = BuildManager.instance;
     }
 

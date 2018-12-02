@@ -11,13 +11,6 @@ public class EnemyMovement : MonoBehaviour {
     public float DistanceToGoal {
         get
         {
-            /*
-            if (target == null)
-            {
-                return Waypoints.points.Length * 10000f;
-            }
-            */
-
             Vector3 dir = target.position - transform.position;
             int waypointsLeft = Waypoints.points.Length - waypointIndex;
             float _distanceToGoal = 10000f * waypointsLeft + dir.magnitude;
