@@ -51,7 +51,7 @@ public class InteractableNode : MonoBehaviour
         if (interactable.attachedToHand == null && startingGrabType != GrabTypes.None)
         {
             // Build turret
-            node.AttemptBuildTurret();
+            node.Select();
         }
     }
 }

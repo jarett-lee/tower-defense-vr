@@ -1,53 +1,48 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NodeUI : MonoBehaviour {
+public class NodeUI : MonoBehaviour
+{
 
-	public GameObject ui;
+    public GameObject buildMenu;
+    public GameObject turretMenu;
 
-	public Text upgradeCost;
-	public Button upgradeButton;
+    public Text upgradeCost;
 
-	public Text sellAmount;
+    public Text sellAmount;
 
-	private Node target;
+    private Node target;
 
-	public void SetTarget (Node _target)
-	{
-		target = _target;
+    public void SetTarget(Node _target)
+    {
+        target = _target;
 
-		transform.position = target.GetBuildPosition();
+        if (target.turret == null)
+        {
+            buildMenu.SetActive(true);
+            turretMenu.SetActive(false);
+        }
+        else
+        {
+            buildMenu.SetActive(false);
+            turretMenu.SetActive(true);
 
-		if (!target.isUpgraded)
-		{
-			upgradeCost.text = "$" + target.turretBlueprint.upgradeCost;
-			upgradeButton.interactable = true;
-		} else
-		{
-			upgradeCost.text = "DONE";
-			upgradeButton.interactable = false;
-		}
+            if (!target.isUpgraded)
+            {
+                upgradeCost.text = "Upgrade for: $" + target.turretBlueprint.upgradeCost;
+            }
+            else
+            {
+                upgradeCost.text = "No more upgrades";
+            }
 
-		sellAmount.text = "$" + target.turretBlueprint.GetSellAmount();
+            sellAmount.text = "Sell for: $" + target.turretBlueprint.GetSellAmount();
+        }
+    }
 
-		ui.SetActive(true);
-	}
-
-	public void Hide ()
-	{
-		ui.SetActive(false);
-	}
-
-	public void Upgrade ()
-	{
-		target.UpgradeTurret();
-		BuildManager.instance.DeselectNode();
-	}
-
-	public void Sell ()
-	{
-		target.SellTurret();
-		BuildManager.instance.DeselectNode();
-	}
-
+    public void Hide()
+    {
+        buildMenu.SetActive(false);
+        turretMenu.SetActive(false);
+    }
 }

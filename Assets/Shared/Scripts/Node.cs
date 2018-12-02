@@ -13,11 +13,14 @@ public class Node : MonoBehaviour {
 	public bool isUpgraded = false;
 
 	private Renderer rend;
+    private Color startColor;
 
 	BuildManager buildManager;
 
 	void Start ()
 	{
+        rend = GetComponentInChildren<Renderer>();
+        startColor = rend.material.color;
 		buildManager = BuildManager.instance;
     }
 
@@ -26,10 +29,26 @@ public class Node : MonoBehaviour {
 		return transform.position + positionOffset;
 	}
 
+	public void Select ()
+    {
+		buildManager.SelectNode(this);
+    }
+
+	public void Highlight ()
+    {
+        rend.material.color = Color.green;
+    }
+
+	public void UnHighlight ()
+    {
+        rend.material.color = startColor;
+    }
+
 	public void AttemptBuildTurret ()
 	{
 		if (turret != null)
 		{
+            Debug.Log("select turret");
 			buildManager.SelectNode(this);
 			return;
 		}
@@ -85,6 +104,8 @@ public class Node : MonoBehaviour {
 		PlayerStats.Money += turretBlueprint.GetSellAmount();
 
 		Destroy(turret);
+		turret = null;
 		turretBlueprint = null;
+        isUpgraded = false;
 	}
 }

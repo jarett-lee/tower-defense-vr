@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67c7b81984a9334f91eca12d0d90b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 2.5, z: 0}
   turret: {fileID: 0}
   turretBlueprint:
     prefab: {fileID: 0}
