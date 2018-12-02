@@ -32,11 +32,8 @@ public class Node : MonoBehaviour {
 		return transform.position + positionOffset;
 	}
 
-	void OnMouseDown ()
+	public void AttemptBuildTurret ()
 	{
-		if (EventSystem.current.IsPointerOverGameObject())
-			return;
-
 		if (turret != null)
 		{
 			buildManager.SelectNode(this);
@@ -64,9 +61,6 @@ public class Node : MonoBehaviour {
 
 		turretBlueprint = blueprint;
 
-		GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
-		Destroy(effect, 5f);
-
 		Debug.Log("Turret build!");
 	}
 
@@ -87,9 +81,6 @@ public class Node : MonoBehaviour {
 		GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
 		turret = _turret;
 
-		GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
-		Destroy(effect, 5f);
-
 		isUpgraded = true;
 
 		Debug.Log("Turret upgraded!");
@@ -99,34 +90,7 @@ public class Node : MonoBehaviour {
 	{
 		PlayerStats.Money += turretBlueprint.GetSellAmount();
 
-		GameObject effect = (GameObject)Instantiate(buildManager.sellEffect, GetBuildPosition(), Quaternion.identity);
-		Destroy(effect, 5f);
-
 		Destroy(turret);
 		turretBlueprint = null;
 	}
-
-	void OnMouseEnter ()
-	{
-		if (EventSystem.current.IsPointerOverGameObject())
-			return;
-
-		if (!buildManager.CanBuild)
-			return;
-
-		if (buildManager.HasMoney)
-		{
-			rend.material.color = hoverColor;
-		} else
-		{
-			rend.material.color = notEnoughMoneyColor;
-		}
-
-	}
-
-	void OnMouseExit ()
-	{
-		rend.material.color = startColor;
-    }
-
 }
