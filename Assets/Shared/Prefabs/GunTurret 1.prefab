@@ -450,9 +450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917400c311691e947bbbc6df2542e6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
-  fireRate: 2
-  damage: 30
+  range: 15
+  fireRate: 1
+  damage: 20
   enemyTag: enemy
   lineRenderer: {fileID: 120297011090128502}
   laserFadeDuration: 0.1

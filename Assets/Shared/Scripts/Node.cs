@@ -14,14 +14,14 @@ public class Node : MonoBehaviour {
     public Material highlightMaterial;
 
 	private Renderer rend;
-    private Color startColor;
+    private Material startMaterial;
 
 	BuildManager buildManager;
 
 	void Start ()
 	{
         rend = GetComponentInChildren<Renderer>();
-        startColor = rend.material.color;
+        startMaterial = rend.material;
 		buildManager = BuildManager.instance;
         //Highlight();
     }
@@ -43,7 +43,7 @@ public class Node : MonoBehaviour {
 
 	public void UnHighlight ()
     {
-        rend.material.color = startColor;
+        rend.material = startMaterial;
     }
 
 	public void AttemptBuildTurret ()
