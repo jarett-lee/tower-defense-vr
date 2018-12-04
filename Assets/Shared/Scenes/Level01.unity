@@ -375,7 +375,7 @@ Transform:
   m_GameObject: {fileID: 82762778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.009}
-  m_LocalScale: {x: 0.5, y: 0.08, z: 0.15}
+  m_LocalScale: {x: 0.6, y: 0.08, z: 0.15}
   m_Children: []
   m_Father: {fileID: 1962308925}
   m_RootOrder: 1
@@ -788,7 +788,7 @@ Transform:
   m_GameObject: {fileID: 266637687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.009}
-  m_LocalScale: {x: 0.5, y: 0.08, z: 0.15}
+  m_LocalScale: {x: 0.6, y: 0.08, z: 0.15}
   m_Children: []
   m_Father: {fileID: 820672835}
   m_RootOrder: 1
@@ -893,6 +893,10 @@ Prefab:
     - target: {fileID: 153878, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445746, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
+      propertyPath: traceLayerMask.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
@@ -2056,7 +2060,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00000023841858, y: -0.106933884}
-  m_SizeDelta: {x: 0.5, y: 0.08}
+  m_SizeDelta: {x: 0.6, y: 0.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &570972565
 MonoBehaviour:
@@ -2302,7 +2306,7 @@ Transform:
   m_GameObject: {fileID: 674192403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.009}
-  m_LocalScale: {x: 0.5, y: 0.08, z: 0.15}
+  m_LocalScale: {x: 0.6, y: 0.08, z: 0.15}
   m_Children: []
   m_Father: {fileID: 861580430}
   m_RootOrder: 1
@@ -3123,7 +3127,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00000023841858, y: -0.25693393}
-  m_SizeDelta: {x: 0.5, y: 0.08}
+  m_SizeDelta: {x: 0.6, y: 0.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820672837
 MonoBehaviour:
@@ -3443,7 +3447,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.19306612}
-  m_SizeDelta: {x: 0.5, y: 0.08}
+  m_SizeDelta: {x: 0.6, y: 0.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &861580432
 MonoBehaviour:
@@ -4086,14 +4090,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1466905170}
-        m_MethodName: ChangeScene
-        m_Mode: 5
+        m_MethodName: ResetScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: VR
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: Valve.VR.InteractionSystem.CustomEvents+UnityEventHand, Assembly-CSharp,
@@ -4118,7 +4122,7 @@ MonoBehaviour:
   useHandObjectAttachmentPoint: 1
   handFollowTransform: {fileID: 0}
   handFollowTransformPosition: 1
-  handFollowTransformRotation: 1
+  handFollowTransformRotation: 0
   highlightOnHover: 1
   hideHighlight: []
 --- !u!114 &1004756140
@@ -4265,7 +4269,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00000023841858, y: -0.106933884}
-  m_SizeDelta: {x: 0.5, y: 0.08}
+  m_SizeDelta: {x: 0.6, y: 0.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1033900900
 MonoBehaviour:
@@ -4596,7 +4600,7 @@ Transform:
   m_GameObject: {fileID: 1068755598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.009}
-  m_LocalScale: {x: 0.5, y: 0.08, z: 0.15}
+  m_LocalScale: {x: 0.6, y: 0.08, z: 0.15}
   m_Children: []
   m_Father: {fileID: 570972563}
   m_RootOrder: 1
@@ -4709,7 +4713,7 @@ Transform:
   m_GameObject: {fileID: 1095439608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.009}
-  m_LocalScale: {x: 0.5, y: 0.08, z: 0.15}
+  m_LocalScale: {x: 0.6, y: 0.08, z: 0.15}
   m_Children: []
   m_Father: {fileID: 1217087578}
   m_RootOrder: 1
@@ -5181,7 +5185,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.043066118}
-  m_SizeDelta: {x: 0.5, y: 0.08}
+  m_SizeDelta: {x: 0.6, y: 0.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217087580
 MonoBehaviour:
@@ -6059,7 +6063,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Interactions_Example
+          m_StringArgument: LevelSelect
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: Valve.VR.InteractionSystem.CustomEvents+UnityEventHand, Assembly-CSharp,
@@ -6589,7 +6593,7 @@ Transform:
   m_GameObject: {fileID: 1436464547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.009}
-  m_LocalScale: {x: 0.5, y: 0.08, z: 0.15}
+  m_LocalScale: {x: 0.6, y: 0.08, z: 0.15}
   m_Children: []
   m_Father: {fileID: 1719225983}
   m_RootOrder: 1
@@ -7136,7 +7140,7 @@ Transform:
   m_GameObject: {fileID: 1591661752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.009}
-  m_LocalScale: {x: 0.5, y: 0.08, z: 0.15}
+  m_LocalScale: {x: 0.6, y: 0.08, z: 0.15}
   m_Children: []
   m_Father: {fileID: 1033900898}
   m_RootOrder: 1
@@ -7694,7 +7698,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.19306612}
-  m_SizeDelta: {x: 0.5, y: 0.08}
+  m_SizeDelta: {x: 0.6, y: 0.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719225985
 MonoBehaviour:
@@ -7946,7 +7950,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.043066118}
-  m_SizeDelta: {x: 0.5, y: 0.08}
+  m_SizeDelta: {x: 0.6, y: 0.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1754831053
 MonoBehaviour:
@@ -9102,7 +9106,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00000023841858, y: -0.25693393}
-  m_SizeDelta: {x: 0.5, y: 0.08}
+  m_SizeDelta: {x: 0.6, y: 0.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1962308927
 MonoBehaviour:
@@ -9241,9 +9245,9 @@ GameObject:
   - component: {fileID: 1972539008}
   - component: {fileID: 1972539007}
   - component: {fileID: 1972539006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TeleportArea
-  m_TagString: Untagged
+  m_TagString: teleportArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9597,7 +9601,7 @@ Transform:
   m_GameObject: {fileID: 2058935932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.009}
-  m_LocalScale: {x: 0.5, y: 0.08, z: 0.15}
+  m_LocalScale: {x: 0.6, y: 0.08, z: 0.15}
   m_Children: []
   m_Father: {fileID: 1754831051}
   m_RootOrder: 1
