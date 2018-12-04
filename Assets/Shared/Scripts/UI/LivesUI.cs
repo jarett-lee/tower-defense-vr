@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class LivesUI : MonoBehaviour {
-    private TextMeshPro livesText;
+    private Text livesText;
 
     private void Start()
     {
-        livesText = GetComponent<TextMeshPro>();
+        livesText = GetComponent<Text>();
     }
 
     void Update () {
