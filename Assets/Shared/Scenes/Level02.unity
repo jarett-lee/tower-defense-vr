@@ -898,6 +898,10 @@ Prefab:
       propertyPath: traceLayerMask.m_Bits
       value: 512
       objectReference: {fileID: 0}
+    - target: {fileID: 11445746, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
+      propertyPath: specificTeleportMarker
+      value: 
+      objectReference: {fileID: 1972539004}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
   m_IsPrefabAsset: 0

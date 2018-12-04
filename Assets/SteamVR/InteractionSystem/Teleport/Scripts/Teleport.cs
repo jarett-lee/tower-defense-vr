@@ -65,8 +65,9 @@ namespace Valve.VR.InteractionSystem
 		public Transform offsetReticleTransform;
 		public MeshRenderer floorDebugSphere;
 		public LineRenderer floorDebugLine;
+        public GameObject specificTeleportMarker;
 
-		private LineRenderer pointerLineRenderer;
+        private LineRenderer pointerLineRenderer;
 		private GameObject teleportPointerObject;
 		private Transform pointerStartTransform;
 		private Hand pointerHand = null;
@@ -170,6 +171,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		void Start()
 		{
+            specificTeleportMarker.SetActive(true);
 			teleportMarkers = GameObject.FindObjectsOfType<TeleportMarkerBase>();
 
 			HidePointer();
@@ -208,7 +210,6 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		private void CheckForSpawnPoint()
 		{
-			teleportMarkers = GameObject.FindObjectsOfType<TeleportMarkerBase>();
 			foreach ( TeleportMarkerBase teleportMarker in teleportMarkers )
 			{
 				TeleportPoint teleportPoint = teleportMarker as TeleportPoint;
@@ -647,6 +648,7 @@ namespace Valve.VR.InteractionSystem
 
 			teleportArc.Hide();
 
+            specificTeleportMarker.SetActive(true);
 			teleportMarkers = GameObject.FindObjectsOfType<TeleportMarkerBase>();
 			foreach ( TeleportMarkerBase teleportMarker in teleportMarkers )
 			{
@@ -688,7 +690,6 @@ namespace Valve.VR.InteractionSystem
 				teleportPointerObject.SetActive( false );
 				teleportArc.Show();
 
-			    teleportMarkers = GameObject.FindObjectsOfType<TeleportMarkerBase>();
 				foreach ( TeleportMarkerBase teleportMarker in teleportMarkers )
 				{
 					if ( teleportMarker.markerActive && teleportMarker.ShouldActivate( player.feetPositionGuess ) )
@@ -779,7 +780,6 @@ namespace Valve.VR.InteractionSystem
 			}
 
 			//Tint color for the teleport points
-			teleportMarkers = GameObject.FindObjectsOfType<TeleportMarkerBase>();
 			foreach ( TeleportMarkerBase teleportMarker in teleportMarkers )
 			{
 				teleportMarker.SetAlpha( fullTintAlpha * meshAlphaPercent, meshAlphaPercent );
