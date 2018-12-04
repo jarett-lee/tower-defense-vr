@@ -11,17 +11,19 @@ public class Node : MonoBehaviour {
 	public TurretBlueprint turretBlueprint;
 	[HideInInspector]
 	public bool isUpgraded = false;
+    public Material highlightMaterial;
 
 	private Renderer rend;
-    private Color startColor;
+    private Material startMaterial;
 
 	BuildManager buildManager;
 
 	void Start ()
 	{
         rend = GetComponentInChildren<Renderer>();
-        startColor = rend.material.color;
+        startMaterial = rend.material;
 		buildManager = BuildManager.instance;
+        //Highlight();
     }
 
 	public Vector3 GetBuildPosition ()
@@ -36,12 +38,12 @@ public class Node : MonoBehaviour {
 
 	public void Highlight ()
     {
-        rend.material.color = Color.green;
+        rend.material = highlightMaterial;
     }
 
 	public void UnHighlight ()
     {
-        rend.material.color = startColor;
+        rend.material = startMaterial;
     }
 
 	public void AttemptBuildTurret ()

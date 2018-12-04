@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 4212964919712928}
   - component: {fileID: 114175172452971162}
   m_Layer: 0
-  m_Name: Gun Turret 3 Up
+  m_Name: GunTurret 3 Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,9 +450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917400c311691e947bbbc6df2542e6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
-  fireRate: 1
-  damage: 30
+  range: 10
+  fireRate: 0.3
+  damage: 600
   enemyTag: enemy
   lineRenderer: {fileID: 120306590837174188}
   laserFadeDuration: 0.1
