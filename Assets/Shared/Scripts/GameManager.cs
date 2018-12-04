@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     public static bool GameIsOver;
 
@@ -28,12 +29,18 @@ public class GameManager : MonoBehaviour {
 
     void EndGame()
     {
+        if (GameIsOver)
+            return;
+
         GameIsOver = true;
         gameOverUI.SetActive(true);
     }
 
     public void WinLevel()
     {
+        if (GameIsOver)
+            return;
+
         GameIsOver = true;
         completeLevelUI.SetActive(true);
     }
