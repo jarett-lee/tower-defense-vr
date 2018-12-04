@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class MoneyUI : MonoBehaviour {
-    private TextMeshPro moneyText;
+    private Text moneyText;
 
 	void Start () {
-        moneyText = GetComponent<TextMeshPro>();
+        moneyText = GetComponent<Text>();
 	}
 	
 	void Update () {
