@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
     public float startSpeed = 10f;
@@ -13,8 +14,8 @@ public class Enemy : MonoBehaviour {
 
     public int worth = 50;
 
-    // [Header("Unity Stuff")]
-    // public Image healthBar;
+    [Header("Unity Stuff")]
+    public Image healthBar;
 
     private bool isDead = false;
 
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour {
     {
         health -= amount;
 
-        // healthBar.fillAmount = health / startHealth;
+        healthBar.fillAmount = health / startHealth;
 
         if (health <= 0 && !isDead)
         {
