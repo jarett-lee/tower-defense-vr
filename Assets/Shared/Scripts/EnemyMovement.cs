@@ -59,7 +59,7 @@ public class EnemyMovement : MonoBehaviour
             GameObject soundGameObject = new GameObject();
             soundGameObject.transform.position = transform.position;
             AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-            audioSource.clip = Resources.Load("ReachEndSound") as AudioClip;
+            audioSource.clip = Resources.Load("Sound/Hitmarker") as AudioClip;
             audioSource.Play();
             Destroy(soundGameObject, 5f);
 

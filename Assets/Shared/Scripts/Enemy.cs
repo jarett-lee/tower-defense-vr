@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour {
         GameObject soundGameObject = new GameObject();
         soundGameObject.transform.position = transform.position;
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.clip = Resources.Load("SpawnSound") as AudioClip;
+        audioSource.clip = Resources.Load("Sound/Warp") as AudioClip;
         audioSource.Play();
         Destroy(soundGameObject, 5f);
     }
@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour {
         GameObject soundGameObject = new GameObject();
         soundGameObject.transform.position = transform.position;
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.clip = Resources.Load("SpawnSound") as AudioClip;
+        audioSource.clip = Resources.Load("Sound/Explosion") as AudioClip;
         audioSource.Play();
         Destroy(soundGameObject, 5f);
 

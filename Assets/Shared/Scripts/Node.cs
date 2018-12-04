@@ -80,7 +80,7 @@ public class Node : MonoBehaviour {
         GameObject soundGameObject = new GameObject();
         soundGameObject.transform.position = turret.transform.position;
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.clip = Resources.Load("BuildSound") as AudioClip;
+        audioSource.clip = Resources.Load("Sound/Hammer") as AudioClip;
         audioSource.Play();
         Destroy(soundGameObject, 5f);
 
@@ -117,7 +117,7 @@ public class Node : MonoBehaviour {
         GameObject soundGameObject = new GameObject();
         soundGameObject.transform.position = turret.transform.position;
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.clip = Resources.Load("SellSound") as AudioClip;
+        audioSource.clip = Resources.Load("Sound/Cha Ching") as AudioClip;
         audioSource.Play();
         Destroy(soundGameObject, 5f);
 
