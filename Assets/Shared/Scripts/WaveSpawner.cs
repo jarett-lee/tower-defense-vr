@@ -13,7 +13,8 @@ public class WaveSpawner : MonoBehaviour {
     public Transform spawnPoint;
 
     public float timeBetweenWaves = 5f;
-    private float countdown = 2f;
+    public float initialCountdown = 10f;
+    private float countdown;
 
     public TextMeshPro waveCountdownText;
     public TextMeshPro enemiesLeftText;
@@ -22,6 +23,13 @@ public class WaveSpawner : MonoBehaviour {
     public GameManager gameManager;
 
     private int waveIndex = 0;
+
+    private void Start()
+    {
+        waveIndex = 0;
+        EnemiesAlive = 0;
+        countdown = initialCountdown;
+    }
 
     void Update()
     {

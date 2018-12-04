@@ -4068,7 +4068,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015258789, y: 0.07}
+  m_AnchoredPosition: {x: -0.000015258789, y: 0.003}
   m_SizeDelta: {x: 0.6, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004756138
@@ -6034,7 +6034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000023841858, y: -0.106933884}
+  m_AnchoredPosition: {x: -0.00000023841858, y: -0.174}
   m_SizeDelta: {x: 0.6, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1271172064
@@ -8733,6 +8733,7 @@ MonoBehaviour:
     rate: 1
   spawnPoint: {fileID: 2022509562}
   timeBetweenWaves: 5
+  initialCountdown: 10
   waveCountdownText: {fileID: 2120129725}
   enemiesLeftText: {fileID: 903709063}
   waveIndexText: {fileID: 748878315}
