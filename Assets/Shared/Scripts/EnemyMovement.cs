@@ -54,6 +54,15 @@ public class EnemyMovement : MonoBehaviour
         {
             PlayerStats.Lives--;
             WaveSpawner.EnemiesAlive--;
+
+            // TODO do better sound
+            GameObject soundGameObject = new GameObject();
+            soundGameObject.transform.position = transform.position;
+            AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+            audioSource.clip = Resources.Load("ReachEndSound") as AudioClip;
+            audioSource.Play();
+            Destroy(soundGameObject, 5f);
+
             Destroy(gameObject);
             return;
         }

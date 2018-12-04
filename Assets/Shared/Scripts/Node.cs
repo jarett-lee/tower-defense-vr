@@ -76,7 +76,15 @@ public class Node : MonoBehaviour {
 
 		turretBlueprint = blueprint;
 
-		Debug.Log("Turret build!");
+        // TODO do better sound
+        GameObject soundGameObject = new GameObject();
+        soundGameObject.transform.position = turret.transform.position;
+        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+        audioSource.clip = Resources.Load("BuildSound") as AudioClip;
+        audioSource.Play();
+        Destroy(soundGameObject, 5f);
+
+		Debug.Log("Turret built!");
 	}
 
 	public void UpgradeTurret ()
@@ -104,6 +112,14 @@ public class Node : MonoBehaviour {
 	public void SellTurret ()
 	{
 		PlayerStats.Money += turretBlueprint.GetSellAmount();
+
+        // TODO do better sound
+        GameObject soundGameObject = new GameObject();
+        soundGameObject.transform.position = turret.transform.position;
+        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+        audioSource.clip = Resources.Load("SellSound") as AudioClip;
+        audioSource.Play();
+        Destroy(soundGameObject, 5f);
 
 		Destroy(turret);
 		turret = null;

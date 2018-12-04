@@ -23,6 +23,14 @@ public class Enemy : MonoBehaviour {
     {
         speed = startSpeed;
         health = startHealth;
+
+        // TODO do better sound
+        GameObject soundGameObject = new GameObject();
+        soundGameObject.transform.position = transform.position;
+        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+        audioSource.clip = Resources.Load("SpawnSound") as AudioClip;
+        audioSource.Play();
+        Destroy(soundGameObject, 5f);
     }
 
     public void TakeDamage(float amount)
@@ -50,6 +58,14 @@ public class Enemy : MonoBehaviour {
 
         // GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         // Destroy(effect, 5f);
+
+        // TODO do better sound
+        GameObject soundGameObject = new GameObject();
+        soundGameObject.transform.position = transform.position;
+        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+        audioSource.clip = Resources.Load("SpawnSound") as AudioClip;
+        audioSource.Play();
+        Destroy(soundGameObject, 5f);
 
         WaveSpawner.EnemiesAlive--;
 
