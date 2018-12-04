@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 public class EnemyMovement : MonoBehaviour
 {
-    public float speed = 10f;
+    private Enemy enemy;
 
     private Transform target;
     private int waypointIndex = 0;
@@ -31,13 +32,14 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
     {
+        enemy = GetComponent<Enemy>();
         target = Waypoints.points[0];
     }
 
     void Update()
     {
         Vector3 dir = target.position - transform.position;
-        Vector3 move = dir.normalized * speed * Time.deltaTime;
+        Vector3 move = dir.normalized * enemy.speed * Time.deltaTime;
         transform.Translate(move, Space.World);
 
         if (dir.magnitude <= move.magnitude)

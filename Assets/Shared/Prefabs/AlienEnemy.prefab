@@ -1583,7 +1583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dceb3ed5eeac654a9177b9e8440f413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 10
+  startSpeed: 8
   speed: 0
   startHealth: 100
   worth: 50
@@ -1598,7 +1598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1079013a766ba146a487f166176e1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
 --- !u!137 &137416186965422050
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

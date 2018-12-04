@@ -6852,48 +6852,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4567327917346014, guid: 77aac742db3b44a41a1f4b40eb4a7a66,
     type: 2}
   m_PrefabInternal: {fileID: 1675920834}
---- !u!1001 &1687147912
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1880128083}
-    m_Modifications:
-    - target: {fileID: 4702797747928594, guid: 4031123c1f3a35445a6add13a5e627d0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702797747928594, guid: 4031123c1f3a35445a6add13a5e627d0, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702797747928594, guid: 4031123c1f3a35445a6add13a5e627d0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702797747928594, guid: 4031123c1f3a35445a6add13a5e627d0, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702797747928594, guid: 4031123c1f3a35445a6add13a5e627d0, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702797747928594, guid: 4031123c1f3a35445a6add13a5e627d0, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702797747928594, guid: 4031123c1f3a35445a6add13a5e627d0, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702797747928594, guid: 4031123c1f3a35445a6add13a5e627d0, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4031123c1f3a35445a6add13a5e627d0, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1710202979
 GameObject:
   m_ObjectHideFlags: 0
@@ -7751,11 +7709,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4567327917346014, guid: 77aac742db3b44a41a1f4b40eb4a7a66,
     type: 2}
   m_PrefabInternal: {fileID: 1807392638}
---- !u!4 &1860625944 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4702797747928594, guid: 4031123c1f3a35445a6add13a5e627d0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1687147912}
 --- !u!1001 &1868469135
 Prefab:
   m_ObjectHideFlags: 0
@@ -7878,7 +7831,6 @@ Transform:
   - {fileID: 1667548194}
   - {fileID: 570249066}
   - {fileID: 813500294}
-  - {fileID: 1860625944}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7907,16 +7859,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 1482493895352112, guid: 1264c2fb2ecf747448a9139f0fd44314, type: 2}
-    count: 5
-    rate: 3
+    count: 4
+    rate: 1
   - enemy: {fileID: 1701178843799864, guid: 4031123c1f3a35445a6add13a5e627d0, type: 2}
-    count: 5
-    rate: 0.5
+    count: 6
+    rate: 1
   - enemy: {fileID: 1582835414252466, guid: a4b4e2091957da84d9c42c021e9d387f, type: 2}
-    count: 5
-    rate: 0.5
+    count: 4
+    rate: 1
   spawnPoint: {fileID: 2081674272}
-  timeBetweenWaves: 2
+  timeBetweenWaves: 5
   waveCountdownText: {fileID: 2120129725}
   enemiesLeftText: {fileID: 903709063}
   waveIndexText: {fileID: 748878315}
