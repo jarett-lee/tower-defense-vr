@@ -89,7 +89,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 2a3f4131afcb7e247b53942e1b6d87de, type: 2}
+  - {fileID: 2100000, guid: 039221bbc258f6b40ad389bcebd288e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,6 +158,7 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   isUpgraded: 0
+  mat: {fileID: 2100000, guid: 311bdcea6069d384bacf70272da99d77, type: 2}
 --- !u!114 &114960155024068544
 MonoBehaviour:
   m_ObjectHideFlags: 1

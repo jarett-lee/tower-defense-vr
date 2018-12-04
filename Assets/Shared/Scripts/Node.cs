@@ -11,6 +11,7 @@ public class Node : MonoBehaviour {
 	public TurretBlueprint turretBlueprint;
 	[HideInInspector]
 	public bool isUpgraded = false;
+    public Material highlightMaterial;
 
 	private Renderer rend;
     private Color startColor;
@@ -22,6 +23,7 @@ public class Node : MonoBehaviour {
         rend = GetComponentInChildren<Renderer>();
         startColor = rend.material.color;
 		buildManager = BuildManager.instance;
+        //Highlight();
     }
 
 	public Vector3 GetBuildPosition ()
@@ -36,7 +38,7 @@ public class Node : MonoBehaviour {
 
 	public void Highlight ()
     {
-        rend.material.color = Color.green;
+        rend.material = highlightMaterial;
     }
 
 	public void UnHighlight ()
