@@ -2676,11 +2676,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 748878317}
@@ -3553,11 +3553,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 903709064}
@@ -7967,24 +7967,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 237e30ec06a120f46aec2fd1908813c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardTurret:
-    prefab: {fileID: 1672866547853506, guid: 1e6803397d1359e46b1eca72f5ba53f3, type: 2}
-    cost: 10
-    upgradedPrefab: {fileID: 1712177766401546, guid: 0f020e93acc6f3f459b92ded1809cd9c,
-      type: 2}
-    upgradeCost: 20
-  missileLauncher:
+  turret1Text: {fileID: 836399421}
+  turret2Text: {fileID: 1636590024}
+  turret3Text: {fileID: 343391017}
+  turretBlueprint1:
     prefab: {fileID: 1451316001114334, guid: 8ebe14f720b67bc48ac987b089e9bc2d, type: 2}
-    cost: 30
+    cost: 100
     upgradedPrefab: {fileID: 1514933198907730, guid: 0ff9b32e69b2e784da770fcdbbf0eb72,
       type: 2}
-    upgradeCost: 50
-  laserBeamer:
+    upgradeCost: 200
+  turretBlueprint2:
+    prefab: {fileID: 1672866547853506, guid: 1e6803397d1359e46b1eca72f5ba53f3, type: 2}
+    cost: 200
+    upgradedPrefab: {fileID: 1627136089695016, guid: b5b75385fd8185646b49bd6539d8f0ee,
+      type: 2}
+    upgradeCost: 400
+  turretBlueprint3:
     prefab: {fileID: 1298687528989614, guid: 59327bcb2b4c41a4183375783b18dfbe, type: 2}
-    cost: 100
+    cost: 400
     upgradedPrefab: {fileID: 1120832520146994, guid: 55baf8bf777014642a097be70bd19d9e,
       type: 2}
-    upgradeCost: 1000
+    upgradeCost: 800
 --- !u!1 &1932838975
 GameObject:
   m_ObjectHideFlags: 0
@@ -8916,11 +8919,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2120129726}
