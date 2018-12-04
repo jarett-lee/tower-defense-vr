@@ -7859,16 +7859,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 1482493895352112, guid: 1264c2fb2ecf747448a9139f0fd44314, type: 2}
-    count: 5
-    rate: 3
+    count: 4
+    rate: 1
   - enemy: {fileID: 1701178843799864, guid: 4031123c1f3a35445a6add13a5e627d0, type: 2}
-    count: 5
-    rate: 0.5
+    count: 6
+    rate: 1
   - enemy: {fileID: 1582835414252466, guid: a4b4e2091957da84d9c42c021e9d387f, type: 2}
-    count: 5
-    rate: 0.5
+    count: 4
+    rate: 1
   spawnPoint: {fileID: 2081674272}
-  timeBetweenWaves: 2
+  timeBetweenWaves: 5
   waveCountdownText: {fileID: 2120129725}
   enemiesLeftText: {fileID: 903709063}
   waveIndexText: {fileID: 748878315}
