@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 4584645837410650}
   - component: {fileID: 114652400421720734}
   m_Layer: 0
-  m_Name: GunTurret 2 Up
+  m_Name: GunTurret 2 Up 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
