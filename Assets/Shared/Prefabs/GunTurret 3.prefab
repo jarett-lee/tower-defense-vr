@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 4236227629596412}
   - component: {fileID: 114252399147725036}
   m_Layer: 0
-  m_Name: Gun Turret 3
+  m_Name: GunTurret 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
