@@ -2,6 +2,7 @@
 
 ## Demo
 Click on the image below to watch the gameplay demo.
+
 [![Gameplay Mechanics Demo](http://img.youtube.com/vi/eKHQB4YcPD0/0.jpg)](http://www.youtube.com/watch?v=eKHQB4YcPD0)
 
 ## Description
